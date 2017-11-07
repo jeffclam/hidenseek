@@ -1,0 +1,6 @@
+framework module Pods_hideNSeekTests {
+  umbrella header "Pods-hideNSeekTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

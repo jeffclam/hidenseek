@@ -1,0 +1,6 @@
+framework module Pods_hideNSeek {
+  umbrella header "Pods-hideNSeek-umbrella.h"
+
+  export *
+  module * { export * }
+}
