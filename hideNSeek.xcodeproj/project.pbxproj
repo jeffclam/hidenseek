@@ -116,13 +116,13 @@
 		1CA6857F1FB13BDF002B90C7 /* hideNSeek */ = {
 			isa = PBXGroup;
 			children = (
-				1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */,
 				1CA685801FB13BDF002B90C7 /* AppDelegate.swift */,
 				1CA685821FB13BDF002B90C7 /* ViewController.swift */,
 				1CA685841FB13BDF002B90C7 /* Main.storyboard */,
 				1CA685871FB13BDF002B90C7 /* Assets.xcassets */,
 				1CA685891FB13BDF002B90C7 /* LaunchScreen.storyboard */,
 				1CA6858C1FB13BDF002B90C7 /* Info.plist */,
+				1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */,
 			);
 			path = hideNSeek;
 			sourceTree = "<group>";
