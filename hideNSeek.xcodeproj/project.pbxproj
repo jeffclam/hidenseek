@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		19C7BD48332FDBF3A7F8A506 /* Pods_hideNSeekUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */; };
-		1C54DEE11FB2D1CE008F2A52 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C54DEE01FB2D1CE008F2A52 /* ARKit.framework */; };
 		1C760B3F1FB13DB700AE5596 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */; };
 		1CA685811FB13BDF002B90C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685801FB13BDF002B90C7 /* AppDelegate.swift */; };
 		1CA685831FB13BDF002B90C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685821FB13BDF002B90C7 /* ViewController.swift */; };
@@ -40,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		1BFEA668E7C4501EF8788C49 /* Pods-hideNSeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.release.xcconfig"; sourceTree = "<group>"; };
-		1C54DEE01FB2D1CE008F2A52 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CA6857D1FB13BDF002B90C7 /* hideNSeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hideNSeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA685801FB13BDF002B90C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C54DEE11FB2D1CE008F2A52 /* ARKit.framework in Frameworks */,
 				A4696BCC76193159708BF9A0 /* Pods_hideNSeek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +148,6 @@
 		5C04F3A32C736286E74EFEE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C54DEE01FB2D1CE008F2A52 /* ARKit.framework */,
 				65585FA1CB70C0A07E9D185F /* Pods_hideNSeek.framework */,
 				6733EADB1C10358F26D76534 /* Pods_hideNSeekTests.framework */,
 				9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */,
@@ -637,9 +633,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X33ZBH5MR;
 				INFOPLIST_FILE = hideNSeek/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cpe436.hideNSeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,9 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4X33ZBH5MR;
 				INFOPLIST_FILE = hideNSeek/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cpe436.hideNSeek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
