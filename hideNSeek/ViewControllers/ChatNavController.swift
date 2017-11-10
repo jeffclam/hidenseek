@@ -1,5 +1,5 @@
 //
-//  MasterTabVC.swift
+//  ChatNavController.swift
 //  hideNSeek
 //
 //  Created by Rachel Chang on 11/9/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterTabVC: UITabBarController {
+class ChatNavController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

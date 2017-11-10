@@ -25,6 +25,7 @@
 		CC8F97971FB5325E00103E6B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97961FB5325E00103E6B /* ARViewController.swift */; };
 		CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */; };
 		CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979A1FB5330E00103E6B /* ChatViewController.swift */; };
+		CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979C1FB5340C00103E6B /* ChatNavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		CC8F97961FB5325E00103E6B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		CC8F979A1FB5330E00103E6B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CC8F979C1FB5340C00103E6B /* ChatNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavController.swift; sourceTree = "<group>"; };
 		DC1F8582E21DCF88D1CFEE86 /* Pods-hideNSeekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekUITests/Pods-hideNSeekUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F03E25C51018F5E7E2D7C309 /* Pods-hideNSeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 				CC8F97961FB5325E00103E6B /* ARViewController.swift */,
 				CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */,
 				CC8F979A1FB5330E00103E6B /* ChatViewController.swift */,
+				CC8F979C1FB5340C00103E6B /* ChatNavController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */,
 				CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */,
 				CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */,
+				CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */,
 				CC8F97911FB5314500103E6B /* RoomViewController.swift in Sources */,
 				1CA685831FB13BDF002B90C7 /* LoginViewController.swift in Sources */,
 				CC8F97971FB5325E00103E6B /* ARViewController.swift in Sources */,

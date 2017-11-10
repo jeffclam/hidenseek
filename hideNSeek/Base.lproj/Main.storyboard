@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="-108" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Room View Controller-->
         <scene sceneID="OJp-DS-8dI">
             <objects>
-                <viewController id="Qbq-Yd-k9T" sceneMemberID="viewController">
+                <viewController id="Qbq-Yd-k9T" customClass="RoomViewController" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nZt-dc-jXS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
         <!--Root View Controller-->
         <scene sceneID="AIu-an-sq6">
             <objects>
-                <tableViewController id="jMN-vp-KK2" sceneMemberID="viewController">
+                <tableViewController id="jMN-vp-KK2" customClass="ChatRoomVC" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WuS-Qn-brl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="3090" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat RoomVC-->
         <scene sceneID="5RJ-fQ-9fH">
             <objects>
-                <viewController id="i5G-3R-V7e" sceneMemberID="viewController">
+                <viewController id="i5G-3R-V7e" customClass="ChatRoomVC" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ow9-on-sbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +222,7 @@
         <!--Item-->
         <scene sceneID="6Hh-zA-NRK">
             <objects>
-                <navigationController id="uzC-hh-cAN" sceneMemberID="viewController">
+                <navigationController id="uzC-hh-cAN" customClass="ChatNavController" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vkI-Rx-mJj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SUu-CL-1BC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -239,7 +239,7 @@
         <!--Item-->
         <scene sceneID="jfP-7l-Yhe">
             <objects>
-                <viewController id="Smp-ze-1Vg" sceneMemberID="viewController">
+                <viewController id="Smp-ze-1Vg" customClass="ARViewController" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3v8-sl-1rs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,7 +266,7 @@
         <!--Item 1-->
         <scene sceneID="sxB-rU-kIS">
             <objects>
-                <viewController id="dWn-8d-6i7" sceneMemberID="viewController">
+                <viewController id="dWn-8d-6i7" customClass="MapViewController" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmh-xY-s4L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="2341.5999999999999" y="-540.17991004497753"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Master TabVC-->
         <scene sceneID="gSZ-DP-BZg">
             <objects>
-                <tabBarController id="zJv-HZ-kor" sceneMemberID="viewController">
+                <tabBarController id="zJv-HZ-kor" customClass="MasterTabVC" customModule="hideNSeek" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R14-Mg-Ar8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
