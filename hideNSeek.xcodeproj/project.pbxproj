@@ -26,6 +26,10 @@
 		CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */; };
 		CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979A1FB5330E00103E6B /* ChatViewController.swift */; };
 		CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979C1FB5340C00103E6B /* ChatNavController.swift */; };
+		CC8F97A01FB5389100103E6B /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979F1FB5389100103E6B /* RoomService.swift */; };
+		CC8F97A21FB538A100103E6B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97A11FB538A100103E6B /* Room.swift */; };
+		CC8F97A41FB538AD00103E6B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97A31FB538AD00103E6B /* Player.swift */; };
+		CC8F97A61FB5396A00103E6B /* DB_Structure.json in Resources */ = {isa = PBXBuildFile; fileRef = CC8F97A51FB5396A00103E6B /* DB_Structure.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		CC8F979A1FB5330E00103E6B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CC8F979C1FB5340C00103E6B /* ChatNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavController.swift; sourceTree = "<group>"; };
+		CC8F979F1FB5389100103E6B /* RoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
+		CC8F97A11FB538A100103E6B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		CC8F97A31FB538AD00103E6B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CC8F97A51FB5396A00103E6B /* DB_Structure.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DB_Structure.json; sourceTree = "<group>"; };
 		DC1F8582E21DCF88D1CFEE86 /* Pods-hideNSeekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekUITests/Pods-hideNSeekUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F03E25C51018F5E7E2D7C309 /* Pods-hideNSeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +141,7 @@
 		1CA6857F1FB13BDF002B90C7 /* hideNSeek */ = {
 			isa = PBXGroup;
 			children = (
+				CC8F979E1FB5386200103E6B /* Models */,
 				CC8F978F1FB530F000103E6B /* ViewControllers */,
 				1CA685801FB13BDF002B90C7 /* AppDelegate.swift */,
 				1CA685841FB13BDF002B90C7 /* Main.storyboard */,
@@ -140,6 +149,7 @@
 				1CA685891FB13BDF002B90C7 /* LaunchScreen.storyboard */,
 				1CA6858C1FB13BDF002B90C7 /* Info.plist */,
 				1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */,
+				CC8F97A51FB5396A00103E6B /* DB_Structure.json */,
 			);
 			path = hideNSeek;
 			sourceTree = "<group>";
@@ -199,6 +209,16 @@
 				CC8F979C1FB5340C00103E6B /* ChatNavController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CC8F979E1FB5386200103E6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC8F979F1FB5389100103E6B /* RoomService.swift */,
+				CC8F97A11FB538A100103E6B /* Room.swift */,
+				CC8F97A31FB538AD00103E6B /* Player.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +339,7 @@
 			files = (
 				1CA6858B1FB13BDF002B90C7 /* LaunchScreen.storyboard in Resources */,
 				1C760B3F1FB13DB700AE5596 /* GoogleService-Info.plist in Resources */,
+				CC8F97A61FB5396A00103E6B /* DB_Structure.json in Resources */,
 				1CA685881FB13BDF002B90C7 /* Assets.xcassets in Resources */,
 				1CA685861FB13BDF002B90C7 /* Main.storyboard in Resources */,
 			);
@@ -501,11 +522,14 @@
 				CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */,
 				CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */,
 				CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */,
+				CC8F97A41FB538AD00103E6B /* Player.swift in Sources */,
+				CC8F97A01FB5389100103E6B /* RoomService.swift in Sources */,
 				CC8F97911FB5314500103E6B /* RoomViewController.swift in Sources */,
 				1CA685831FB13BDF002B90C7 /* LoginViewController.swift in Sources */,
 				CC8F97971FB5325E00103E6B /* ARViewController.swift in Sources */,
 				CC8F97951FB531F100103E6B /* MapViewController.swift in Sources */,
 				1CA685811FB13BDF002B90C7 /* AppDelegate.swift in Sources */,
+				CC8F97A21FB538A100103E6B /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
