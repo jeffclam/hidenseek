@@ -10,7 +10,7 @@
 		19C7BD48332FDBF3A7F8A506 /* Pods_hideNSeekUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */; };
 		1C760B3F1FB13DB700AE5596 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */; };
 		1CA685811FB13BDF002B90C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685801FB13BDF002B90C7 /* AppDelegate.swift */; };
-		1CA685831FB13BDF002B90C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685821FB13BDF002B90C7 /* ViewController.swift */; };
+		1CA685831FB13BDF002B90C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685821FB13BDF002B90C7 /* LoginViewController.swift */; };
 		1CA685861FB13BDF002B90C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA685841FB13BDF002B90C7 /* Main.storyboard */; };
 		1CA685881FB13BDF002B90C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA685871FB13BDF002B90C7 /* Assets.xcassets */; };
 		1CA6858B1FB13BDF002B90C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA685891FB13BDF002B90C7 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,13 @@
 		1CA685A11FB13BDF002B90C7 /* hideNSeekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685A01FB13BDF002B90C7 /* hideNSeekUITests.swift */; };
 		9CDD0A1DD433CD3A5E75C02F /* Pods_hideNSeekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6733EADB1C10358F26D76534 /* Pods_hideNSeekTests.framework */; };
 		A4696BCC76193159708BF9A0 /* Pods_hideNSeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65585FA1CB70C0A07E9D185F /* Pods_hideNSeek.framework */; };
+		CC8F978E1FB52DDC00103E6B /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC8F978D1FB52DDC00103E6B /* ARKit.framework */; };
+		CC8F97911FB5314500103E6B /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97901FB5314400103E6B /* RoomViewController.swift */; };
+		CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97921FB5319F00103E6B /* MasterTabVC.swift */; };
+		CC8F97951FB531F100103E6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97941FB531F100103E6B /* MapViewController.swift */; };
+		CC8F97971FB5325E00103E6B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97961FB5325E00103E6B /* ARViewController.swift */; };
+		CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */; };
+		CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979A1FB5330E00103E6B /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +49,7 @@
 		1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CA6857D1FB13BDF002B90C7 /* hideNSeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hideNSeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA685801FB13BDF002B90C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CA685821FB13BDF002B90C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CA685821FB13BDF002B90C7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1CA685851FB13BDF002B90C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CA685871FB13BDF002B90C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CA6858A1FB13BDF002B90C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +66,13 @@
 		7ED9A6159AE34EC4E6ECE8B7 /* Pods-hideNSeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeek/Pods-hideNSeek.release.xcconfig"; sourceTree = "<group>"; };
 		9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hideNSeekUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06AC71525167DDFC21BC979 /* Pods-hideNSeekUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekUITests/Pods-hideNSeekUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC8F978D1FB52DDC00103E6B /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		CC8F97901FB5314400103E6B /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		CC8F97921FB5319F00103E6B /* MasterTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabVC.swift; sourceTree = "<group>"; };
+		CC8F97941FB531F100103E6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CC8F97961FB5325E00103E6B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
+		CC8F979A1FB5330E00103E6B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		DC1F8582E21DCF88D1CFEE86 /* Pods-hideNSeekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekUITests/Pods-hideNSeekUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F03E25C51018F5E7E2D7C309 /* Pods-hideNSeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8F978E1FB52DDC00103E6B /* ARKit.framework in Frameworks */,
 				A4696BCC76193159708BF9A0 /* Pods_hideNSeek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,8 +131,8 @@
 		1CA6857F1FB13BDF002B90C7 /* hideNSeek */ = {
 			isa = PBXGroup;
 			children = (
+				CC8F978F1FB530F000103E6B /* ViewControllers */,
 				1CA685801FB13BDF002B90C7 /* AppDelegate.swift */,
-				1CA685821FB13BDF002B90C7 /* ViewController.swift */,
 				1CA685841FB13BDF002B90C7 /* Main.storyboard */,
 				1CA685871FB13BDF002B90C7 /* Assets.xcassets */,
 				1CA685891FB13BDF002B90C7 /* LaunchScreen.storyboard */,
@@ -148,6 +163,7 @@
 		5C04F3A32C736286E74EFEE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC8F978D1FB52DDC00103E6B /* ARKit.framework */,
 				65585FA1CB70C0A07E9D185F /* Pods_hideNSeek.framework */,
 				6733EADB1C10358F26D76534 /* Pods_hideNSeekTests.framework */,
 				9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */,
@@ -166,6 +182,20 @@
 				DC1F8582E21DCF88D1CFEE86 /* Pods-hideNSeekUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC8F978F1FB530F000103E6B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1CA685821FB13BDF002B90C7 /* LoginViewController.swift */,
+				CC8F97901FB5314400103E6B /* RoomViewController.swift */,
+				CC8F97921FB5319F00103E6B /* MasterTabVC.swift */,
+				CC8F97941FB531F100103E6B /* MapViewController.swift */,
+				CC8F97961FB5325E00103E6B /* ARViewController.swift */,
+				CC8F97981FB532BD00103E6B /* ChatRoomVC.swift */,
+				CC8F979A1FB5330E00103E6B /* ChatViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +494,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CA685831FB13BDF002B90C7 /* ViewController.swift in Sources */,
+				CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */,
+				CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */,
+				CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */,
+				CC8F97911FB5314500103E6B /* RoomViewController.swift in Sources */,
+				1CA685831FB13BDF002B90C7 /* LoginViewController.swift in Sources */,
+				CC8F97971FB5325E00103E6B /* ARViewController.swift in Sources */,
+				CC8F97951FB531F100103E6B /* MapViewController.swift in Sources */,
 				1CA685811FB13BDF002B90C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
