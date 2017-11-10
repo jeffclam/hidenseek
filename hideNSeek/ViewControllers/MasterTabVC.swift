@@ -9,10 +9,14 @@
 import UIKit
 
 class MasterTabVC: UITabBarController {
+    var roomService: RoomService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print ("\(roomService?.room?.name)")
+        print ("roomService made it to MasterTabVC")
     }
     
     override func didReceiveMemoryWarning() {

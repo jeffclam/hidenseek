@@ -9,6 +9,7 @@
 import UIKit
 
 class RoomViewController: UIViewController {
+    var roomService: RoomService?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,8 @@ class RoomViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! MasterTabVC
+        dvc.roomService = roomService
+    }
 }
