@@ -9,10 +9,14 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    let roomService = RoomService()
+    var players: [Player]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print ("*** Loaded")
+        roomService.retrieveRoom(roomname: "room_test")
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 }
 
