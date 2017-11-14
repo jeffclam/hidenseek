@@ -10,7 +10,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
     let roomService = RoomService()
-    var players = [Player]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,10 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! RoomViewController
         dvc.roomService = roomService
+    }
+    
+    @IBAction func startGame(_ sender: Any) {
+        
     }
 }
 

@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 class Room {
     var name: String
+    //var roomLeader: String
     var players = [Player]()
     let ref: DatabaseReference?
     
@@ -40,6 +41,7 @@ class Room {
     func toAnyObject() -> Any {
         return [
             "name" : name,
+            "players" : players
         ]
     }
 }
