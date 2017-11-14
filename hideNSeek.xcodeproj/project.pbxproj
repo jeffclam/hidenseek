@@ -29,6 +29,7 @@
 		CC8F97A01FB5389100103E6B /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F979F1FB5389100103E6B /* RoomService.swift */; };
 		CC8F97A21FB538A100103E6B /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97A11FB538A100103E6B /* Room.swift */; };
 		CC8F97A41FB538AD00103E6B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8F97A31FB538AD00103E6B /* Player.swift */; };
+		D5DFA1E71FBB66650040449E /* PlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFA1E61FBB66650040449E /* PlayerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		CC8F979F1FB5389100103E6B /* RoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
 		CC8F97A11FB538A100103E6B /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		CC8F97A31FB538AD00103E6B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D5DFA1E61FBB66650040449E /* PlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewCell.swift; sourceTree = "<group>"; };
 		DC1F8582E21DCF88D1CFEE86 /* Pods-hideNSeekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekUITests/Pods-hideNSeekUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F03E25C51018F5E7E2D7C309 /* Pods-hideNSeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 				1CA685891FB13BDF002B90C7 /* LaunchScreen.storyboard */,
 				1CA6858C1FB13BDF002B90C7 /* Info.plist */,
 				1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */,
+				D5DFA1E61FBB66650040449E /* PlayerViewCell.swift */,
 			);
 			path = hideNSeek;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */,
+				D5DFA1E71FBB66650040449E /* PlayerViewCell.swift in Sources */,
 				CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */,
 				CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */,
 				CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */,
