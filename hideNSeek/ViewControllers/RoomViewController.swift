@@ -39,7 +39,11 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dvc = segue.destination as! MasterTabVC
-        dvc.roomService = roomService
+        if let dvc = segue.destination as? MasterTabVC {
+            dvc.roomService = roomService
+        } else if let dvc = segue.destination as? LoginViewController {
+            //dvc.roomService
+            //remove player from room
+        }
     }
 }
