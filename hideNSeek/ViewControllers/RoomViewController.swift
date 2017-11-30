@@ -9,14 +9,21 @@
 import UIKit
 
 class RoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var roomService: RoomService?
+    var roomService : RoomService?
+    var room : Room?
     var players = [Player]()
+    
+    @IBOutlet weak var roomNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        players = (roomService?.room?.players)!
+   
+        room!.getPlayersFromDB(closure: {
+            self.players = self.room!.getPlayers()
+        })
+        
+        roomNameLabel.text = room!.name
     }
     
     override func didReceiveMemoryWarning() {
