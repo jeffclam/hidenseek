@@ -2,7 +2,7 @@
 //  RoomViewController.swift
 //  hideNSeek
 //
-//  Created by Rachel Chang on 11/9/17.
+//  Created by Jeffrey Lam on 11/9/17.
 //  Copyright © 2017 jeffreylam. All rights reserved.
 //
 
@@ -14,6 +14,7 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
     var roomService : RoomService?
     var room : Room?
     var players = [Player]()
+    var currentPlayer : Player?
     
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +29,8 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
         
         roomNameLabel.text = room!.name
+        print (currentPlayer!.toString())
+        room?.sendPlayerToDB(player: currentPlayer!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +54,8 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dvc = segue.destination as? MasterTabVC {
-            dvc.roomService = roomService
+            dvc.room = room
+            dvc.locationManager = locationManager
         }
         /*
         else if let dvc = segue.destination as? LoginViewController {

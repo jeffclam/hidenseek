@@ -26,7 +26,11 @@ class MapViewController: UIViewController {
     }
     
     override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: currentLocation!.coordinate.latitude, longitude: currentLocation!.coordinate.longitude, zoom: 15.0)
+        //locationManager!.delegate = self
+        currentLocation = locationManager.location
+        let coordinates = currentLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 35.300347, longitude: -120.662285)
+        print ("*** MapVC: coordinates = \(coordinates)")
+        let camera = GMSCameraPosition.camera(withLatitude: coordinates.latitude, longitude: coordinates.longitude, zoom: 15.0)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
         view = mapView

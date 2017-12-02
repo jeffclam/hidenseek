@@ -17,14 +17,14 @@ class Room {
     
     init (name: String, ref: DatabaseReference) {
         self.name = name
-        self.ref = ref
+        self.ref = ref.child(name)
     }
     
     init(snapshot: DataSnapshot) {
         name = snapshot.key
         let snapvalues = snapshot.value as! [String : AnyObject]
         print ("snapvalues in Room: \(snapvalues)")
-        ref = snapshot.ref
+        ref = snapshot.ref.child(name)
     }
     
     func getPlayers() -> [Player] {
@@ -32,7 +32,7 @@ class Room {
     }
     
     func getPlayersFromDB(closure: @escaping () -> Void) {
-        ref?.child(name).child("players").observe(.value, with:
+        ref!.child("players").observe(.value, with:
             { snapshot in
                 var players = [Player]()
                 
@@ -44,6 +44,10 @@ class Room {
                 closure()
             }
         )
+    }
+    
+    func sendPlayerToDB(player: Player) {
+        ref!.child("players").child(player.name).setValue(player.toAnyObject())
     }
     
     func toAnyObject() -> Any {

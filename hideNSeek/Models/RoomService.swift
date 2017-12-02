@@ -12,7 +12,6 @@ import FirebaseDatabase
 
 class RoomService {
     var dbRoot : DatabaseReference?
-    var ready : Bool?
     var room : Room?
     
     init() {
@@ -21,10 +20,8 @@ class RoomService {
     func accessRoom(roomname: String, closure: @escaping () -> Void) {
         Database.database().isPersistenceEnabled = true
         dbRoot = Database.database().reference(withPath: "rooms")
-        ready = false
         dbRoot!.child(roomname).observeSingleEvent(of: .value, with: { (snapshot) in
             if (snapshot.exists()) {
-                //self.retrieveRoom(roomname: roomname, closure: closure)
                 self.room = Room(name: roomname, ref: self.dbRoot!)
                 closure()
             } else {
@@ -44,7 +41,6 @@ class RoomService {
                 
                 self.room = room
                 print("***room \(room.name) retrieved")
-                self.ready = true
                 closure()
         })
     }

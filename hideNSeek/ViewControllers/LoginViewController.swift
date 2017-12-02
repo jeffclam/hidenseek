@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  hideNSeek
 //
-//  Created by CheckoutUser on 11/6/17.
+//  Created by Jeffrey Lam on 11/6/17.
 //  Copyright © 2017 jeffreylam. All rights reserved.
 //
 
@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
         dvc.roomService = roomService
         dvc.room = roomService.room
         dvc.locationManager = locationManager
+        dvc.currentPlayer = Player(name: nickNameField.text!, coordinates: currentLocation!.coordinate)
     }
     
     @IBAction func startRoom(_ sender: Any) {

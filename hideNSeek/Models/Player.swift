@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import CoreLocation
 
 class Player {
     var name: String
@@ -22,6 +23,13 @@ class Player {
         self.isHider = isHider
     }
     
+    init (name: String, coordinates: CLLocationCoordinate2D) {
+        self.name = name
+        self.latitude = coordinates.latitude
+        self.longitude = coordinates.longitude
+        self.isHider = Bool(truncating: arc4random_uniform(2) as NSNumber)
+    }
+    
     init(snapshot: DataSnapshot) {
         name = snapshot.key
         let snapvalues = snapshot.value as! [String : AnyObject]
@@ -31,9 +39,12 @@ class Player {
         isHider = snapvalues["isHider"] as! Bool
     }
     
+    func toString() -> String {
+        return "\(name): \(self.toAnyObject())"
+    }
+    
     func toAnyObject() -> Any {
         return [
-            "name" : name,
             "latitude" : latitude,
             "longitude" : longitude,
             "isHider" : isHider
