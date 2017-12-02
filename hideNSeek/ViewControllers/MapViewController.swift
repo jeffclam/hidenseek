@@ -11,8 +11,9 @@ import GoogleMaps
 import CoreLocation
 
 class MapViewController: UIViewController {
-    var locationManager : CLLocationManager!
+    var locationManager: CLLocationManager!
     var currentLocation: CLLocation?
+    var zoomLevel: Float = 15.0
     var mapView: GMSMapView!
     
     override func viewDidLoad() {
@@ -26,12 +27,18 @@ class MapViewController: UIViewController {
     }
     
     override func loadView() {
-        //locationManager!.delegate = self
+        locationManager!.delegate = self
         currentLocation = locationManager.location
+        
         let coordinates = currentLocation?.coordinate ?? CLLocationCoordinate2D(latitude: 35.300347, longitude: -120.662285)
-        print ("*** MapVC: coordinates = \(coordinates)")
-        let camera = GMSCameraPosition.camera(withLatitude: coordinates.latitude, longitude: coordinates.longitude, zoom: 15.0)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: coordinates.latitude, longitude: coordinates.longitude, zoom: zoomLevel)
+
+        /* Setting up Google Map View */
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         view = mapView
     }
@@ -41,7 +48,11 @@ class MapViewController: UIViewController {
 extension MapViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
-        print ("Location: \(location)")
+        print ("*** Location: \(location)")
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: zoomLevel)
+        
+        mapView.animate(to: camera)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
