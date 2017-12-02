@@ -8,20 +8,26 @@
 
 import Foundation
 import FirebaseDatabase
+import CoreLocation
 
 class Player {
     var name: String
     var latitude: Double
     var longitude: Double
     var isHider: Bool
-    let ref: DatabaseReference?
     
     init (name: String, latitude: Double, longitude: Double, isHider: Bool) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
         self.isHider = isHider
-        ref = nil
+    }
+    
+    init (name: String, coordinates: CLLocationCoordinate2D) {
+        self.name = name
+        self.latitude = coordinates.latitude
+        self.longitude = coordinates.longitude
+        self.isHider = Bool(truncating: arc4random_uniform(2) as NSNumber)
     }
     
     init(snapshot: DataSnapshot) {
@@ -31,12 +37,14 @@ class Player {
         latitude = snapvalues["latitude"] as! Double
         longitude = snapvalues["longitude"] as! Double
         isHider = snapvalues["isHider"] as! Bool
-        ref = snapshot.ref
+    }
+    
+    func toString() -> String {
+        return "\(name): \(self.toAnyObject())"
     }
     
     func toAnyObject() -> Any {
         return [
-            "name" : name,
             "latitude" : latitude,
             "longitude" : longitude,
             "isHider" : isHider

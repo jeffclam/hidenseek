@@ -8,6 +8,7 @@ target 'hideNSeek' do
   # Pods for hideNSeek
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'GoogleMaps'
 
   target 'hideNSeekTests' do
     inherit! :search_paths
