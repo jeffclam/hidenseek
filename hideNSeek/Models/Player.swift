@@ -14,14 +14,12 @@ class Player {
     var latitude: Double
     var longitude: Double
     var isHider: Bool
-    let ref: DatabaseReference?
     
     init (name: String, latitude: Double, longitude: Double, isHider: Bool) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
         self.isHider = isHider
-        ref = nil
     }
     
     init(snapshot: DataSnapshot) {
@@ -31,7 +29,6 @@ class Player {
         latitude = snapvalues["latitude"] as! Double
         longitude = snapvalues["longitude"] as! Double
         isHider = snapvalues["isHider"] as! Bool
-        ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {

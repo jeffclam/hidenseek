@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
 
 class RoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var locationManager : CLLocationManager!
     var roomService : RoomService?
     var room : Room?
     var players = [Player]()
