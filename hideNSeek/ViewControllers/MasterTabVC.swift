@@ -15,7 +15,7 @@ class MasterTabVC: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print ("\(roomService?.room?.name)")
+        print ("\(roomService!.room!.name)")
         print ("roomService made it to MasterTabVC")
     }
     

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -198,12 +198,12 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="eQV-sK-nVn" firstAttribute="top" secondItem="pCf-5k-EZj" secondAttribute="top" constant="54" id="7no-Gb-suJ"/>
+                                            <constraint firstItem="I4R-fk-y6C" firstAttribute="leading" secondItem="pCf-5k-EZj" secondAttribute="leading" constant="202" id="Bnn-R0-9Zm"/>
                                             <constraint firstItem="eQV-sK-nVn" firstAttribute="leading" secondItem="pCf-5k-EZj" secondAttribute="leading" constant="94" id="GIe-mB-8zB"/>
                                             <constraint firstItem="I4R-fk-y6C" firstAttribute="top" secondItem="pCf-5k-EZj" secondAttribute="top" constant="54" id="KsT-Ft-Rco"/>
                                             <constraint firstAttribute="trailing" secondItem="eQV-sK-nVn" secondAttribute="trailing" constant="203" id="Yex-5Z-smB"/>
-                                            <constraint firstAttribute="trailing" secondItem="I4R-fk-y6C" secondAttribute="trailing" constant="95" id="Zkc-kB-3hr"/>
                                             <constraint firstAttribute="bottom" secondItem="eQV-sK-nVn" secondAttribute="bottom" constant="20" id="bJq-gX-ObW"/>
-                                            <constraint firstItem="I4R-fk-y6C" firstAttribute="leading" secondItem="pCf-5k-EZj" secondAttribute="leading" constant="202" id="pev-k8-cSA"/>
+                                            <constraint firstAttribute="trailing" secondItem="I4R-fk-y6C" secondAttribute="trailing" constant="95" id="u5P-4b-yF8"/>
                                             <constraint firstAttribute="bottom" secondItem="I4R-fk-y6C" secondAttribute="bottom" constant="20" id="zdc-hg-MLk"/>
                                         </constraints>
                                     </view>
@@ -225,6 +225,7 @@
                     </view>
                     <connections>
                         <outlet property="roomNameLabel" destination="l9z-DG-07r" id="cmM-jh-2fI"/>
+                        <outlet property="tableView" destination="gvN-cU-vko" id="jPo-4p-nxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cca-xs-K9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5Qd-u4-qkj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatPersonCell" id="5Qd-u4-qkj">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Qd-u4-qkj" id="pEe-Vb-8ZV">
@@ -330,18 +331,7 @@
                     <view key="view" contentMode="scaleToFill" id="Vmh-xY-s4L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bkj-UH-YJT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Bkj-UH-YJT" firstAttribute="centerX" secondItem="kse-92-acg" secondAttribute="centerX" id="C7b-4x-mbi"/>
-                            <constraint firstItem="Bkj-UH-YJT" firstAttribute="width" secondItem="kse-92-acg" secondAttribute="width" id="EZd-ol-qhn"/>
-                            <constraint firstItem="Bkj-UH-YJT" firstAttribute="centerY" secondItem="kse-92-acg" secondAttribute="centerY" id="bWl-dQ-xCU"/>
-                            <constraint firstItem="Bkj-UH-YJT" firstAttribute="height" secondItem="kse-92-acg" secondAttribute="height" id="exH-Qn-Y8l"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kse-92-acg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Xyj-GO-gxg"/>

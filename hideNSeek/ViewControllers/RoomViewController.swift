@@ -14,6 +14,7 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
     var players = [Player]()
     
     @IBOutlet weak var roomNameLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
    
         room!.getPlayersFromDB(closure: {
             self.players = self.room!.getPlayers()
+            self.tableView.reloadData()
         })
         
         roomNameLabel.text = room!.name
@@ -48,9 +50,12 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dvc = segue.destination as? MasterTabVC {
             dvc.roomService = roomService
-        } else if let dvc = segue.destination as? LoginViewController {
+        }
+        /*
+        else if let dvc = segue.destination as? LoginViewController {
             //dvc.roomService
             //remove player from room
         }
+        */
     }
 }
