@@ -39,6 +39,10 @@ class Player {
         isHider = snapvalues["isHider"] as! Bool
     }
     
+    func getCoordinate() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
     func toString() -> String {
         return "\(name): \(self.toAnyObject())"
     }

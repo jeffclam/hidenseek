@@ -11,10 +11,8 @@ import CoreLocation
 
 class RoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var locationManager : CLLocationManager!
-    var roomService : RoomService?
     var room : Room?
     var players = [Player]()
-    var currentPlayer : Player?
     
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -29,8 +27,8 @@ class RoomViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
         
         roomNameLabel.text = room!.name
-        print (currentPlayer!.toString())
-        room?.sendPlayerToDB(player: currentPlayer!)
+        print (room!.currentPlayer!.toString())
+        room?.sendPlayerToDB(player: room!.currentPlayer!)
     }
     
     override func didReceiveMemoryWarning() {

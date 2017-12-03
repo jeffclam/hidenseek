@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  hideNSeek
 //
-//  Created by Rachel Chang on 11/9/17.
+//  Created by Jeffrey Lam on 11/9/17.
 //  Copyright © 2017 jeffreylam. All rights reserved.
 //
 
@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     var currentLocation: CLLocation?
     var zoomLevel: Float = 15.0
     var mapView: GMSMapView!
+    var room: Room!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,24 @@ class MapViewController: UIViewController {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         view = mapView
+        
+        updateMarkers()
+    }
+    
+    func updateMarkers() {
+        if (self.isViewLoaded) {
+            mapView.clear()
+            
+            for player in room!.getPlayers() {
+                if (player.name != room!.currentPlayer!.name) {
+                    let position = player.getCoordinate()
+                    let marker = GMSMarker(position: position)
+                    marker.map = self.mapView
+                    marker.appearAnimation = GMSMarkerAnimation.pop
+                    print ("marked")
+                }
+            }
+        }
     }
     
 }

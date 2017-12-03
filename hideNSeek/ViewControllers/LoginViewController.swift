@@ -38,10 +38,9 @@ class LoginViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dvc = segue.destination as! RoomViewController
-        dvc.roomService = roomService
+        roomService.room?.currentPlayer = Player(name: nickNameField.text!, coordinates: currentLocation!.coordinate)
         dvc.room = roomService.room
         dvc.locationManager = locationManager
-        dvc.currentPlayer = Player(name: nickNameField.text!, coordinates: currentLocation!.coordinate)
     }
     
     @IBAction func startRoom(_ sender: Any) {
