@@ -13,6 +13,7 @@ class Room {
     var name: String
     //var roomLeader: String
     var players = [Player]()
+    var currentPlayer : Player?
     let ref: DatabaseReference?
     
     init (name: String, ref: DatabaseReference) {

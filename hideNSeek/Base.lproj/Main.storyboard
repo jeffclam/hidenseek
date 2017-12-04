@@ -319,6 +319,9 @@
                         <viewLayoutGuide key="safeArea" id="yju-y1-e7z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="5ut-To-0PM"/>
+                    <connections>
+                        <outlet property="arView" destination="Xc2-ob-c7X" id="J1I-ib-uyL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erc-aF-q5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
