@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         locationManager.delegate = self
         
         currentLocation = locationManager.location
-        print ("Current location: \(currentLocation!)")
+        //print ("Current location: \(currentLocation!)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +47,11 @@ class LoginViewController: UIViewController {
         if nickNameField.text!.count > 2 {
             if roomCodeField.text!.count == 0 {
                 // Auto-generated roomname
-                performSegue(withIdentifier: "enterRoom", sender: sender)
+                roomCodeField.text = "room_test"
+                roomService.accessRoom(roomname: roomCodeField.text!, closure: {
+                    print ("*** entered room 1")
+                    self.performSegue(withIdentifier: "enterRoom", sender: sender)
+                })
             }
             else if roomCodeField.text!.count >= 4 {
                 print ("*** trying to join room \(roomCodeField.text!)")
