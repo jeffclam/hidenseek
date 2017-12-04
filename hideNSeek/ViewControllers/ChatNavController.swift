@@ -9,10 +9,14 @@
 import UIKit
 
 class ChatNavController: UINavigationController {
+    var room : Room!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let chatroomVC = topViewController as! ChatRoomVC
+        chatroomVC.room = room
     }
     
     override func didReceiveMemoryWarning() {

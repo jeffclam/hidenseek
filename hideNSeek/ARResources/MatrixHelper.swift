@@ -44,9 +44,9 @@ class MatrixHelper {
     }
     
     static func transformMatrix(for matrix: simd_float4x4, originLocation: CLLocation, location: CLLocation) -> simd_float4x4 {
-        let distance = Float(location.distance(from: originLocation))
+        //let distance = Float(location.distance(from: originLocation))
         let bearing = GLKMathDegreesToRadians(Float(originLocation.coordinate.direction(to: location.coordinate)))
-        let position = vector_float4(0.0, 0.0, -distance, 0.0)
+        //let position = vector_float4(0.0, 0.0, -distance, 0.0)
         /*
         let translationMatrix = MatrixHelper.translationMatrix(with: matrix_identity_float4x4, for: position)
  */
