@@ -23,6 +23,9 @@ class MasterTabVC: UITabBarController {
         room.getPlayersFromDB(closure: {
             mapVC.updateMarkers()
         })
+        
+        let chatNavVC = viewControllers![1] as! ChatNavController
+        chatNavVC.room = room
     }
     
     override func didReceiveMemoryWarning() {

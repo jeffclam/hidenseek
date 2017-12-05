@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19C7BD48332FDBF3A7F8A506 /* Pods_hideNSeekUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225C1D58A0C8234A86777AC /* Pods_hideNSeekUITests.framework */; };
+		1C0BCB911FD6693C008FAA22 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0BCB901FD6693C008FAA22 /* Message.swift */; };
 		1C760B3F1FB13DB700AE5596 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */; };
 		1CA685811FB13BDF002B90C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685801FB13BDF002B90C7 /* AppDelegate.swift */; };
 		1CA685831FB13BDF002B90C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA685821FB13BDF002B90C7 /* LoginViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		1BFEA668E7C4501EF8788C49 /* Pods-hideNSeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hideNSeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hideNSeekTests/Pods-hideNSeekTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C0BCB901FD6693C008FAA22 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1C760B3E1FB13DB700AE5596 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CA6857D1FB13BDF002B90C7 /* hideNSeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hideNSeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA685801FB13BDF002B90C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				CC8F979F1FB5389100103E6B /* RoomService.swift */,
 				CC8F97A11FB538A100103E6B /* Room.swift */,
 				CC8F97A31FB538AD00103E6B /* Player.swift */,
+				1C0BCB901FD6693C008FAA22 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				CC8F97991FB532BD00103E6B /* ChatRoomVC.swift in Sources */,
 				D5DFA1E71FBB66650040449E /* PlayerViewCell.swift in Sources */,
 				1CEE8BE11FD3E03300787225 /* MatrixHelper.swift in Sources */,
+				1C0BCB911FD6693C008FAA22 /* Message.swift in Sources */,
 				CC8F97931FB5319F00103E6B /* MasterTabVC.swift in Sources */,
 				CC8F979B1FB5330E00103E6B /* ChatViewController.swift in Sources */,
 				CC8F979D1FB5340C00103E6B /* ChatNavController.swift in Sources */,
