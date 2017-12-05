@@ -2,9 +2,9 @@
 //  ChatViewController.swift
 //  hideNSeek
 //
-//  Created by Rachel Chang on 11/9/17.
+//  Created by Jeffrey Lam on 11/9/17.
 //  Copyright © 2017 jeffreylam. All rights reserved.
-//
+//  Based on https://github.com/aslanyanhaik/Quick-Chat
 
 import UIKit
 
