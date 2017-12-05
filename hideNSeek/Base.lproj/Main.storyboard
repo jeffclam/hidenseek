@@ -342,6 +342,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i5G-3R-V7e" id="9ia-6V-brc"/>
+                                    <outlet property="delegate" destination="i5G-3R-V7e" id="NGr-GE-2Ba"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -349,6 +353,7 @@
                     </view>
                     <connections>
                         <outlet property="inputBar" destination="gDT-SL-jXa" id="mu5-yq-D7k"/>
+                        <outlet property="inputTextField" destination="Tvf-Pj-MDN" id="e22-Dq-SDL"/>
                         <outlet property="tableView" destination="bgV-op-HYw" id="Xh8-ja-zF3"/>
                     </connections>
                 </viewController>
@@ -369,6 +374,9 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Send"/>
+                            <connections>
+                                <action selector="clickSend:" destination="i5G-3R-V7e" eventType="touchUpInside" id="kp9-E2-6N7"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -11,20 +11,32 @@ import UIKit
 class ChatRoomVC: UITableViewController {
     var room : Room!
     var players = [Player]()
-
+    var selectedRow : Int?
+    var messages = [Message] ()
+    var conversations : [String : [Message]] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print ("*** ChatRoomVC: roomname = \(room.name)")
         players = room.getPlayers()
-
+        /*
+        room.downloadMessagesFromDB(closure: {
+            self.messages = self.room.messages
+            
+            for player in self.players {
+                self.conversations[player.name] = self.messages.filter({
+                    $0.sender == player.name || $0.receiver == player.name
+                })
+            }
+        })
+        */
         for i in 0 ..< players.count {
             if players[i].name == room!.currentPlayer!.name {
                 players.remove(at: i)
                 break;
             }
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +59,18 @@ class ChatRoomVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
         performSegue(withIdentifier: "enterChat", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "enterChat" {
+            if let dvc = segue.destination as? ChatViewController {
+                dvc.chattingWith = players[selectedRow!].name
+                dvc.room = room
+                //dvc.messages = conversations[dvc.chattingWith] ?? [Message]()
+            }
+        }
     }
 }
 
