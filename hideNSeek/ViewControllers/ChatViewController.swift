@@ -43,9 +43,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         room.downloadMessagesFromDB(from: room.currentPlayer!.name, to: chattingWith, closure: {
             (conversation: [Message]) -> Void in
             self.messages = conversation
+            self.messages.sort(by: {$0.timeStamp < $1.timeStamp})
             for message in self.messages {
             print ("*** From \(message.sender): \(message.content)")
             }
+            self.tableView.reloadData()
         })
     }
     
@@ -68,14 +70,30 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0;
+        return messages.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "receiverCell", for: indexPath)
-        
-        return cell
+        switch self.messages[indexPath.row].sender {
+        case room.currentPlayer!.name:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "senderCell", for: indexPath) as! SenderCell
+            cell.sentMessage.text = self.messages[indexPath.row].content
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "receiverCell", for: indexPath) as! ReceiverCell
+            cell.receivedMessage.text = self.messages[indexPath.row].content
+            return cell
+        }
     }
     
 }
 
+class ReceiverCell: UITableViewCell {
+    @IBOutlet weak var receivedMessage: UITextView!
+    
+}
+
+class SenderCell: UITableViewCell {
+    @IBOutlet weak var sentMessage: UITextView!
+    
+}

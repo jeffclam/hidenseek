@@ -307,39 +307,57 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiverCell" id="eQ0-AG-kgC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="receiverCell" id="eQ0-AG-kgC" customClass="ReceiverCell" customModule="hideNSeek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQ0-AG-kgC" id="N6N-Hq-MZM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-kJ-5PU">
-                                                    <rect key="frame" x="15" y="0.0" width="240" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-kJ-5PU">
+                                                    <rect key="frame" x="15" y="0.0" width="164" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jt2-kJ-5PU" secondAttribute="trailing" constant="196" id="Yg9-lQ-pkw"/>
+                                                <constraint firstItem="jt2-kJ-5PU" firstAttribute="leading" secondItem="N6N-Hq-MZM" secondAttribute="leading" constant="15" id="ehd-23-awT"/>
+                                                <constraint firstItem="jt2-kJ-5PU" firstAttribute="top" secondItem="N6N-Hq-MZM" secondAttribute="top" id="sCx-1x-fQy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="jt2-kJ-5PU" secondAttribute="bottom" id="bM9-nv-xNk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="receivedMessage" destination="jt2-kJ-5PU" id="AbN-pc-SLi"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="senderCell" id="ryo-2L-4ql">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="senderCell" id="ryo-2L-4ql" customClass="SenderCell" customModule="hideNSeek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryo-2L-4ql" id="Jet-x7-SuA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DE4-F4-8bb">
-                                                    <rect key="frame" x="120" y="-1" width="240" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DE4-F4-8bb">
+                                                    <rect key="frame" x="200" y="-1" width="160" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DE4-F4-8bb" firstAttribute="top" secondItem="Jet-x7-SuA" secondAttribute="top" constant="-1" id="557-QR-m3O"/>
+                                                <constraint firstAttribute="bottom" secondItem="DE4-F4-8bb" secondAttribute="bottom" constant="0.5" id="QTA-rb-y0a"/>
+                                                <constraint firstAttribute="trailing" secondItem="DE4-F4-8bb" secondAttribute="trailing" constant="15" id="qOz-Ne-zEI"/>
+                                                <constraint firstItem="DE4-F4-8bb" firstAttribute="leading" secondItem="Jet-x7-SuA" secondAttribute="leading" constant="200" id="vd3-eV-wUi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="sentMessage" destination="DE4-F4-8bb" id="wH7-XC-rIj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
