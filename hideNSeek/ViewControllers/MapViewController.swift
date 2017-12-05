@@ -71,6 +71,9 @@ extension MapViewController : CLLocationManagerDelegate {
         
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: zoomLevel)
         
+        room.currentPlayer!.latitude = location.coordinate.latitude
+        room.currentPlayer!.longitude = location.coordinate.longitude
+        room.sendPlayerToDB(player: room.currentPlayer!)
         mapView.animate(to: camera)
     }
     
